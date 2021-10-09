@@ -20,10 +20,10 @@ class BundleServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(dirname(__DIR__) . '/config/config.php', 'bundle_name');
 
         // lang
-        $this->loadTranslationsFrom(dirname(__DIR__) .'/resources/lang/', 'bundle_name');
+        $this->loadTranslationsFrom(dirname(__DIR__) .'/resources/lang', 'bundle_name');
 
         // view
-        $this->loadViewsFrom(dirname(__DIR__) . '/resources/views/', 'bundle_name');
+        $this->loadViewsFrom(dirname(__DIR__) . '/resources/views', 'bundle_name');
 
         // routers
         $router_func = include dirname(__DIR__) . '/src/routers.php';
@@ -47,9 +47,9 @@ class BundleServiceProvider extends ServiceProvider
             ]);
 
             // databases
-            $this->loadMigrationsFrom(dirname(__DIR__) . '/migrations/');
+            $this->loadMigrationsFrom(dirname(__DIR__) . '/migrations');
             $this->publishes([
-                dirname(__DIR__) . '/migrations/' => database_path('migrations'),
+                dirname(__DIR__) . '/migrations' => database_path('migrations'),
             ], 'migrations');
 
             // config
