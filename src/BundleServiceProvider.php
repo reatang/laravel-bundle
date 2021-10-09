@@ -24,7 +24,7 @@ class BundleServiceProvider extends ServiceProvider
         $this->loadViewsFrom(dirname(__DIR__) . '/resources/views/', 'bundle_name');
 
         // routers
-        $router_func = include dirname(__DIR__) . 'src/routers.php';
+        $router_func = include dirname(__DIR__) . '/src/routers.php';
         $router->group([
             'prefix' => config('bundle_name.router_prefix'),
 //            'namespace',
