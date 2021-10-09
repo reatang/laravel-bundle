@@ -8,6 +8,6 @@ use Illuminate\Routing\Controller;
 class SomeController extends Controller
 {
     public function index() {
-        return trans('courier::Hello Laravel Bundle');
+        return trans('bundle_name::Hello Laravel Bundle');
     }
 }
