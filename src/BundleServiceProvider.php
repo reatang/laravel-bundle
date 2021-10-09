@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\LaravelPackage;
+namespace Reatang\LaravelBundle;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
