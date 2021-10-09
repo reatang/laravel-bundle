@@ -57,6 +57,11 @@ class BundleServiceProvider extends ServiceProvider
                 dirname(__DIR__) . '/config/config.php' => config_path('bundle_name.php'),
             ], 'config');
 
+            // view
+            $this->publishes([
+                dirname(__DIR__) . '/resources/views' => resource_path('views/vendor/bundle_name'),
+            ], 'public');
+
             // assets
             $this->publishes([
                 dirname(__DIR__) . '/resources/assets' => public_path('vendor/bundle_name'),
