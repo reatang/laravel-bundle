@@ -37,7 +37,7 @@ class SomeCommand extends Command
      */
     public function handle()
     {
-        $this->line(trans('Hello Laravel Bundle'));
+        $this->line(trans('bundle_name::message.Hello Laravel Bundle'));
 
         return 0;
     }
