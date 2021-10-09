@@ -2,9 +2,12 @@
 
 namespace Reatang\LaravelBundle;
 
+use Illuminate\Events\Dispatcher;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use Reatang\LaravelBundle\Commands\SomeCommand;
+use Reatang\LaravelBundle\Events\SomeEvent;
+use Reatang\LaravelBundle\Listeners\SomeListener;
 use function dirname;
 
 class BundleServiceProvider extends ServiceProvider
@@ -12,9 +15,10 @@ class BundleServiceProvider extends ServiceProvider
     /**
      * Perform post-registration booting of services.
      *
-     * @param Router $router
+     * @param Router     $router
+     * @param Dispatcher $event
      */
-    public function boot(Router $router)
+    public function boot(Router $router, Dispatcher $event)
     {
         // config
         $this->mergeConfigFrom(dirname(__DIR__) . '/config/config.php', 'bundle_name');
@@ -35,6 +39,9 @@ class BundleServiceProvider extends ServiceProvider
         ], $router_func);
 
         // middleware
+
+        // event
+        $event->listen(SomeEvent::class, SomeListener::class);
     }
 
     public function register()
