@@ -21,6 +21,23 @@ $>php artisan vendor:publish --provider="Reatang\\LaravelBundle\\BundleServicePr
 $>php artisan vendor:publish --provider="Reatang\\LaravelBundle\\BundleServiceProvider" --tag=public
 ```
 
+## Dir Description
+
+### Commands
+console programs
+    
+### Events and listeners
+event system
+    
+### Http
+web programs
+    
+### Models and repositories
+data control layer
+    
+### Services
+external system interaction
+
 ## License
 
 MIT
