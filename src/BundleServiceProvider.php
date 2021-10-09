@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use Reatang\LaravelBundle\Commands\SomeCommand;
 use function dirname;
 
-class PackageServiceProvider extends ServiceProvider
+class BundleServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
