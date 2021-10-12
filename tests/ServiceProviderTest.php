@@ -15,10 +15,9 @@ use Reatang\LaravelBundle\Services\SomeService;
 
 class ServiceProviderTest extends TestCase
 {
-    public function testApp() {
+    public function testService() {
         $app = new Application(__DIR__);
 
-        $app->register(BundleServiceProvider::class);
         $app->register(CommonServiceProvider::class);
 
         /** @var SomeService $service */
