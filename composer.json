@@ -30,7 +30,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "\\Reatang\\LaravelBundle\\BundleServiceProvider"
+                "\\Reatang\\LaravelBundle\\BundleServiceProvider",
+                "\\Reatang\\LaravelBundle\\CommonServiceProvider"
             ]
         },
         "hooks": {
