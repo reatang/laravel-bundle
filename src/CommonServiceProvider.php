@@ -20,9 +20,13 @@ class CommonServiceProvider
     implements DeferrableProvider
 {
     public function register() {
+
+        // singleton
         $this->app->singleton(SomeService::class, function(){
             return new SomeService();
         });
+
+        // alias
         $this->app->alias(SomeService::class, 'reatang.bundle.service.some');
     }
 

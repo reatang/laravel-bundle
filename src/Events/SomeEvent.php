@@ -21,7 +21,8 @@ class SomeEvent
         $this->data = $data;
     }
 
-    public function getData() {
+    public function getData()
+    {
         return $this->data;
     }
 
