@@ -1,5 +1,13 @@
 <?php
 
-return function (\Illuminate\Routing\Router $router) {
-    $router->get('/', \Reatang\LaravelBundle\Http\Controllers\SomeController::class . '@index');
+use \Illuminate\Routing\Router;
+use \Reatang\LaravelBundle\Http\Controllers;
+
+/**
+ * register router
+ *
+ * @param Router $router
+ */
+return function (Router $router) {
+    $router->get('/', Controllers\SomeController::class . '@index');
 };
