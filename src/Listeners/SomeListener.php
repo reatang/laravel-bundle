@@ -17,6 +17,6 @@ class SomeListener {
     public function handle(SomeEvent $event) {
         $data = $event->getData();
 
-        Log::info('[Event] SomeEvent fire', json_encode($data));
+        Log::info('[Event] SomeEvent fire', $data);
     }
 }
