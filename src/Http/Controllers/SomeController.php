@@ -4,6 +4,7 @@ namespace Reatang\LaravelBundle\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Reatang\LaravelBundle\Events\SomeEvent;
 use Reatang\LaravelBundle\Http\Requests\SomeRequest;
 use Reatang\LaravelBundle\Services\SomeService;
 
@@ -18,6 +19,8 @@ class SomeController extends Controller
     public function index(SomeRequest $request) {
 
         $data = $this->service->getData();
+
+        dispatch(new SomeEvent($data));
 
         return view('bundle_name::index', [
             'title' => trans('bundle_name::message.Hello Laravel Bundle', $data)
