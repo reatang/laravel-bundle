@@ -2,12 +2,14 @@
 
 namespace Reatang\LaravelBundle;
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use Reatang\LaravelBundle\Commands\SomeCommand;
 use Reatang\LaravelBundle\Events\SomeEvent;
 use Reatang\LaravelBundle\Listeners\SomeListener;
+use Reatang\LaravelBundle\Services\SomeService;
 use function dirname;
 
 class BundleServiceProvider extends ServiceProvider
@@ -80,8 +82,5 @@ class BundleServiceProvider extends ServiceProvider
             ], 'lang');
         }
 
-//        $this->app->singleton(SomeService::class, function(){
-//            return new SomeService();
-//        });
     }
 }

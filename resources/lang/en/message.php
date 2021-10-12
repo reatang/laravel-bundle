@@ -1,4 +1,4 @@
 <?php
 return [
-    'Hello Laravel Bundle' => 'Hello Laravel Bundle',
+    'Hello Laravel Bundle' => ':name ： Hello Laravel Bundle',
 ];
