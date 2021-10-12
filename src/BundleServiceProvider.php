@@ -15,7 +15,7 @@ class BundleServiceProvider extends ServiceProvider
     /**
      * Perform post-registration booting of services.
      *
-     * @param Router     $router
+     * @param Router $router
      * @param Dispatcher $event
      */
     public function boot(Router $router, Dispatcher $event)
@@ -24,7 +24,7 @@ class BundleServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(dirname(__DIR__) . '/config/config.php', 'bundle_name');
 
         // lang
-        $this->loadTranslationsFrom(dirname(__DIR__) .'/resources/lang', 'bundle_name');
+        $this->loadTranslationsFrom(dirname(__DIR__) . '/resources/lang', 'bundle_name');
 
         // view
         $this->loadViewsFrom(dirname(__DIR__) . '/resources/views', 'bundle_name');

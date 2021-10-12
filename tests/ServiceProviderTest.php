@@ -1,21 +1,15 @@
 <?php
-/**
- * Created by PHPStorm.
- * User: tanglihao
- * Date: 2021/10/12
- * Time: 下午12:36
- */
 
 namespace Reatang\LaravelBundle\Tests;
 
 use Illuminate\Foundation\Application;
-use Reatang\LaravelBundle\BundleServiceProvider;
 use Reatang\LaravelBundle\CommonServiceProvider;
 use Reatang\LaravelBundle\Services\SomeService;
 
 class ServiceProviderTest extends TestCase
 {
-    public function testService() {
+    public function testService()
+    {
         $app = new Application(__DIR__);
 
         $app->register(CommonServiceProvider::class);

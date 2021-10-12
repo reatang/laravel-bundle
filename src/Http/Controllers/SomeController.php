@@ -12,11 +12,13 @@ class SomeController extends Controller
 {
     protected $service;
 
-    public function __construct(SomeService $service) {
+    public function __construct(SomeService $service)
+    {
         $this->service = $service;
     }
 
-    public function index(SomeRequest $request) {
+    public function index(SomeRequest $request)
+    {
 
         $data = $this->service->getData();
 

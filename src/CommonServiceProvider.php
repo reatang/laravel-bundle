@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PHPStorm.
- * User: tanglihao
- * Date: 2021/10/10
- * Time: 下午12:02
- */
 
 namespace Reatang\LaravelBundle;
 
@@ -19,10 +13,11 @@ class CommonServiceProvider
     // set provider is defer
     implements DeferrableProvider
 {
-    public function register() {
+    public function register()
+    {
 
         // singleton
-        $this->app->singleton(SomeService::class, function(){
+        $this->app->singleton(SomeService::class, function () {
             return new SomeService();
         });
 
@@ -35,7 +30,8 @@ class CommonServiceProvider
      *
      * @return array|string[]
      */
-    public function provides() {
+    public function provides()
+    {
         return [
             'reatang.bundle.service.some',
             SomeService::class
