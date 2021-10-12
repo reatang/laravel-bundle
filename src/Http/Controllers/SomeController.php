@@ -20,7 +20,7 @@ class SomeController extends Controller
 
         $data = $this->service->getData();
 
-        dispatch(new SomeEvent($data));
+        event(new SomeEvent($data));
 
         return view('bundle_name::index', [
             'title' => trans('bundle_name::message.Hello Laravel Bundle', $data)
